@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="utf-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <title>Peter P. Zorzenon</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link href="https://fonts.googleapis.com/css?family=Julius+Sans+One|Lato:300i,400" rel="stylesheet">
+  <link rel="stylesheet" type="text/css" media="screen and (max-width: 1024px)" href="small.css">
+  <link rel="stylesheet" type="text/css" media="screen and (min-width: 1025px)" href="large.css">
+  <!-- <script src="main.js"></script> -->
+  <!-- Global site tag (gtag.js) - Google Analytics -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=UA-211967-15"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag() { dataLayer.push(arguments); }
+    gtag('js', new Date());
+    gtag('config', 'UA-211967-15');
+  </script>
+
+</head>
+
+<body>
+  <div id="main-container">
+    <header>
+      <h1>Peter P. Zorzenon</h1>
+      <p>~Fine art crafted in American steel~</p>
+      <div class="nav">
+        <label for="toggle">&#9776;</label>
+        <input type="checkbox" id="toggle" />
+        <div class="menu">
+          <a href="#">About</a>
+          <a href="#">Contact Pete</a>
+        </div>
+      </div>
+    </header>
+    <div class="center-this-content">
+      <div class="image-container">
+          <button class="trigger"><img src="images/1.jpg"></button>
+          <div class="modal">
+              <div class="modal-content">
+                  <span class="close-button">&times;</span>
+                  <img src="images/IMG_1378.jpg">
+                  <img src="images/thumbs/IMG_1379.jpg">
+                  <img src="images/thumbs/IMG_1381.jpg">
+                  <p class="art_title">Running Thru Steel</p>
+            <p> Running Thru Steel, 6' high by 3' wide, is made of carbon steel. This piece is a self portrait of the artist
+              running from geometric to realism as he runs through steel. The geometric side as well as realistic side is
+              all hand welded ground and carved by hand there is no casting or molding in this or in any of artist's work.
+              This type of steel sculpture work is a trade mark of artist. And shows true capability of the artist.</p>
+              </div>
+          </div>
+
+          <button class="trigger"><img src="images/2.jpg"></button>
+          <div class="modal">
+              <div class="modal-content">
+                  <span class="close-button">&times;</span>
+                  <img src="images/IMG_1378.jpg">
+                  <img src="images/thumbs/IMG_1379.jpg">
+                  <img src="images/thumbs/IMG_1381.jpg">
+                  <p class="art_title">Running Thru Steel</p>
+            <p> Running Thru Steel, 6' high by 3' wide, is made of carbon steel. This piece is a self portrait of the artist
+              running from geometric to realism as he runs through steel. The geometric side as well as realistic side is
+              all hand welded ground and carved by hand there is no casting or molding in this or in any of artist's work.
+              This type of steel sculpture work is a trade mark of artist. And shows true capability of the artist.</p>
+              </div>
+          </div>
+
+          
+              
+            
+        <div class="item item2">
+          <img src="images/2.jpg">
+          <button class="accordion">More Info</button>
+          <div class="panel">
+            <p>Eagle with catch Beautiful sculpture showing eagle landing on piling after catching a fish. The eagle has a seven
+              foot wing span and is made of stainless steel so is the fish. The sculpture is hand made with no casting or
+              molding. Like all of my sculpture's they are welded ground and carved by hand.</p>
+          </div>
+        </div>
+        <div class="item item3">
+          <img src="images/3.jpg">
+        </div>
+        <div class="item item4">
+          <img src="images/4.jpg">
+        </div>
+        <div class="item item5">
+          <img src="images/5.jpg">
+        </div>
+        <div class="item item6">
+          <img src="images/6.jpg">
+        </div>
+        <div class="item item7">
+          <img src="images/7.jpg">
+        </div>
+        <div class="item item8">
+          <img src="images/8.jpg">
+        </div>
+        <div class="item item9">
+          <img src="images/9.jpg">
+        </div>
+      </div>
+    </div>
+  </div>
+  <script>
+    var acc = document.getElementsByClassName("accordion");
+    var i;
+
+    for (i = 0; i < acc.length; i++) {
+      acc[i].addEventListener("click", function () {
+        this.classList.toggle("active");
+
+        if (this.innerHTML === "More Info") {
+          this.innerHTML = "Close";
+        }
+        else if (this.innerHTML === "Close") {
+          this.innerHTML = "More Info"
+        }
+        var panel = this.nextElementSibling;
+        if (panel.style.maxHeight) {
+          panel.style.maxHeight = null;
+        } else {
+          panel.style.maxHeight = panel.scrollHeight + "px";
+        }
+      });
+    }
+
+var modal = document.querySelector(".modal");
+    var trigger = document.querySelector(".trigger");
+    var closeButton = document.querySelector(".close-button");
+
+    function toggleModal() {
+        modal.classList.toggle("show-modal");
+    }
+
+    function windowOnClick(event) {
+        if (event.target === modal) {
+            toggleModal();
+        }
+    }
+
+    trigger.addEventListener("click", toggleModal);
+    closeButton.addEventListener("click", toggleModal);
+    window.addEventListener("click", windowOnClick);
+
+  </script>
+</body>
+
+</html>

@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <style>
+    body {
+      margin: 40px;
+    }
+
+    .wrapper {
+      display: grid;
+      grid-template-columns: 100px 100px 100px;
+      grid-gap: 10px;
+      background-color: #fff;
+      color: #444;
+    }
+
+    .box {
+      background-color: #444;
+      color: #fff;
+      border-radius: 5px;
+      padding: 20px;
+      font-size: 150%;
+    }
+
+    .modal {
+      display: none;
+    }
+
+    .show-modal {
+      opacity: 1;
+      visibility: visible;
+      transform: scale(1.0);
+      transition: visibility 0s linear 0s, opacity 0.25s 0s, transform 0.25s;
+    }
+  </style>
+</head>
+
+<body>
+  <div class="wrapper">
+    <div class="box a">
+      click me to open
+      <div class="modal">
+        <span class="close">X</span>
+        <p>this is the hidden content, box 1</p>
+      </div>
+    </div>
+    <div class="box b">click me to open
+      <div class="modal">
+        <span class="close">X</span>
+        <p>this is the hidden content, box 2</p>
+      </div>
+    </div>
+    <div class="box c">click me to open
+      <div class="modal">
+        <span class="close">X</span>
+        <p>this is the hidden content, box 3</p>
+      </div>
+    </div>
+  </div>
+  <script>
+    var box = document.getElementsByClassName("box");
+    var x;
+    for (x = 0; x < box.length; x++) {
+      box[x].addEventListener("click", function () {
+        this.classList.toggle("show-modal");
+        var panel = this.nextElementSibling;
+        if (panel.className === "modal") {
+          panel.className = "show-modal";
+        } else {
+          panel.className = "modal";
+        }
+      })
+    }
+  </script>
+</body>
+
+</html>

@@ -1,0 +1,5 @@
+rsync -r pzsteel 159.203.69.173:/var/www/chrismulholland.com/public_html
+
+this gets run from the Sites directory.
+
+chmod -R 755 images/

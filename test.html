@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Document</title>
+</head>
+
+<body>
+
+
+  <button class="trigger">
+    <img src="images/2.jpg">
+  </button>
+  <div class="modal">
+    <div class="modal-content">
+      <span class="close-button">X</span>
+      <img src="images/IMG_1378.jpg">
+      <img src="images/thumbs/IMG_1379.jpg">
+      <img src="images/thumbs/IMG_1381.jpg">
+      <p>Running Thru Steel</p>
+      <p> Running Thru Steel, 6' high by 3' wide, is made of carbon steel. This piece is a self portrait of the artist running
+        from geometric to realism as he runs through steel. The geometric side as well as realistic side is all hand welded
+        ground and carved by hand there is no casting or molding in this or in any of artist's work. This type of steel sculpture
+        work is a trade mark of artist. And shows true capability of the artist.</p>
+    </div>
+  </div>
+
+
+
+  <script>
+    var mod = document.getElementsByClassName("modal")
+    var x;
+
+    for (x = 0; x < mod.length; x++) {
+      mod{ x }.addEventListener
+    }
+
+    var modal = document.querySelector(".modal");
+    var trigger = document.querySelector(".trigger");
+    var closeButton = document.querySelector(".close-button");
+
+    function toggleModal() {
+      modal.classList.toggle("show-modal");
+    }
+
+    function windowOnClick(event) {
+      if (event.target === modal) {
+        toggleModal();
+      }
+    }
+
+    trigger.addEventListener("click", toggleModal);
+    closeButton.addEventListener("click", toggleModal);
+    window.addEventListener("click", windowOnClick);
+  </script>
+</body>
+
+</html>
